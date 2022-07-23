@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_multi_webview/views/page_web_view.dart';
+import 'package:flutter_multi_webview/views/tab_web_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        useMaterial3: true,
+        useMaterial3: false,
         colorSchemeSeed: const Color.fromARGB(255, 103, 33, 243),
       ),
       home: const HomeView(),
@@ -41,7 +42,7 @@ class HomeView extends StatelessWidget {
           ListTile(
             title: const Text('TabView'),
             trailing: const Icon(Icons.arrow_forward_outlined),
-            onTap: () {},
+            onTap: () => _moveTo(context, const TabWebView()),
           ),
           ListTile(
             title: const Text('IndexedStack'),
