@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_multi_webview/views/indexed_stack_web_view.dart';
+import 'package:flutter_multi_webview/views/normal_page_web_view.dart';
 import 'package:flutter_multi_webview/views/page_web_view.dart';
 import 'package:flutter_multi_webview/views/tab_web_view.dart';
 
@@ -35,6 +36,12 @@ class HomeView extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          ListTile(
+            title: const Text('PageView without keepalive'),
+            trailing: const Icon(Icons.arrow_forward_outlined),
+            onTap: () => _moveTo(context, const NormalPageWebView()),
+          ),
+          const Divider(indent: 8, endIndent: 8),
           ListTile(
             title: const Text('PageView'),
             trailing: const Icon(Icons.arrow_forward_outlined),

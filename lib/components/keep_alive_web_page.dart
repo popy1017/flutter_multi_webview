@@ -17,9 +17,6 @@ class _KeepAliveWebPageState extends State<KeepAliveWebPage>
     super.build(context);
     return InAppWebView(
       initialUrlRequest: URLRequest(url: Uri.parse(widget.url)),
-      onLoadStart: (c, uri) {
-        print(uri);
-      },
     );
   }
 
