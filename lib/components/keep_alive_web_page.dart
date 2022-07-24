@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
-class KeepAliveWebView extends StatefulWidget {
-  const KeepAliveWebView(this.url, {Key? key}) : super(key: key);
+class KeepAliveWebPage extends StatefulWidget {
+  const KeepAliveWebPage(this.url, {Key? key}) : super(key: key);
 
   final String url;
 
   @override
-  State<KeepAliveWebView> createState() => _KeepAliveWebViewState();
+  State<KeepAliveWebPage> createState() => _KeepAliveWebPageState();
 }
 
-class _KeepAliveWebViewState extends State<KeepAliveWebView>
+class _KeepAliveWebPageState extends State<KeepAliveWebPage>
     with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {

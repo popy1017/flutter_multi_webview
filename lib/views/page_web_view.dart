@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../components/web_page.dart';
+import '../components/keep_alive_web_page.dart';
 
 class PageWebView extends StatefulWidget {
   const PageWebView({Key? key}) : super(key: key);
@@ -23,9 +23,9 @@ class _PageWebViewState extends State<PageWebView> {
       body: PageView(
         controller: _controller,
         children: const [
-          KeepAliveWebView("https://flutter.dev/"),
-          KeepAliveWebView("https://www.nintendo.co.jp/"),
-          KeepAliveWebView("https://www.playstation.com/ja-jp/"),
+          KeepAliveWebPage("https://flutter.dev/"),
+          KeepAliveWebPage("https://www.nintendo.co.jp/"),
+          KeepAliveWebPage("https://www.playstation.com/ja-jp/"),
         ],
         onPageChanged: (int pageIndex) {
           setState(() {
