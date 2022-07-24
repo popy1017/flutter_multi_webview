@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_multi_webview/views/indexed_stack_web_view.dart';
 import 'package:flutter_multi_webview/views/page_web_view.dart';
 import 'package:flutter_multi_webview/views/tab_web_view.dart';
 
@@ -47,7 +48,7 @@ class HomeView extends StatelessWidget {
           ListTile(
             title: const Text('IndexedStack'),
             trailing: const Icon(Icons.arrow_forward_outlined),
-            onTap: () {},
+            onTap: () => _moveTo(context, const IndexedStackWebView()),
           ),
         ],
       ),
