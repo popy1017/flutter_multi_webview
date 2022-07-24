@@ -9,26 +9,20 @@ class TabWebView extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        appBar: _buildAppBar(),
-        body: const TabBarView(
-          children: [
-            KeepAliveWebView("https://flutter.dev/"),
-            KeepAliveWebView("https://www.nintendo.co.jp/"),
-            KeepAliveWebView("https://www.playstation.com/ja-jp/"),
+        appBar: AppBar(),
+        body: Stack(
+          alignment: Alignment.bottomCenter,
+          children: const [
+            TabBarView(
+              children: [
+                KeepAliveWebView("https://flutter.dev/"),
+                KeepAliveWebView("https://www.nintendo.co.jp/"),
+                KeepAliveWebView("https://www.playstation.com/ja-jp/"),
+              ],
+            ),
+            SafeArea(child: TabPageSelector()),
           ],
         ),
-      ),
-    );
-  }
-
-  AppBar _buildAppBar() {
-    return AppBar(
-      bottom: const TabBar(
-        tabs: [
-          Tab(icon: Icon(Icons.directions_car)),
-          Tab(icon: Icon(Icons.directions_transit)),
-          Tab(icon: Icon(Icons.directions_bike)),
-        ],
       ),
     );
   }
